@@ -106,8 +106,11 @@ on c.course_id = e.course_id
 where trainee_id =1
 
 --4. View the schedule (start_date, time_slot) for the trainee's enrolled courses
-select start_D, end_Dfrom Enrollment e join Schedule son e.course_id = s.course_idwhere trainee_id = 1order by start_D--5. Count how many courses the trainee is enrolled in
-select COUNT(*) AS My_enrolled_courses from Enrollmentwhere trainee_id = 1
+select start_D, end_Dfrom Enrollment e join Schedule son e.course_id = s.course_idwhere trainee_id = 1order by start_D--5. Count how many courses the trainee is enrolled in
+select COUNT(*) AS My_enrolled_courses 
+from Enrollment
+where trainee_id = 1
+
 --6. Show course titles, trainer names, and time slots the trainee is attending
 
 select title, t.name as trainer_name, time_slot
